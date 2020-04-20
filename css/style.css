@@ -1,6 +1,21 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Light.otf") format("otf");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-ExtraBold.otf") format("otf");
+    font-weight: 700;
+    font-style: normal;
+}
+
 body {
     margin: 0;
-    font-family: Gilroy;
+    font-family: "Gilroy", sans-serif;
+    font-weight: 300;
     font-size: 16px;
 }
 
@@ -20,12 +35,20 @@ h6 {
 }
 
 .text1 {
-    font-family: Gilroy;
-    font-size: 16px;
     line-height: 26px;
     letter-spacing: 0.05em;
     color: #1f3f68;
     opacity: 0.6;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 15px;
 }
 
 
@@ -142,6 +165,7 @@ h6 {
 
 .intro__title {
     font-family: Galien;
+    font-weight: 700;
     font-size: 64px;
     line-height: 74px;
     letter-spacing: 0.04em;
@@ -153,6 +177,7 @@ h6 {
 /* Button */
 
 .btn {
+    font-family: "Gilroy", sans-serif;
     margin-top: 50px;
     padding: 12px 35px;
     color: #fff;
@@ -183,6 +208,7 @@ h6 {
 }
 
 .card__maintitle {
+    font-weight: 700;
     font-size: 36px;
     line-height: 46px;
     letter-spacing: 0.05em;
@@ -203,6 +229,7 @@ h6 {
 }
 
 .card__title {
+    font-weight: 700;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.05em;
@@ -229,6 +256,7 @@ h6 {
     background-color: #fff;
     display: flex;
     align-items: center;
+    cursor: pointer;
 }
 
 .card__btn svg {
@@ -269,14 +297,16 @@ h6 {
 
 .clients__block {
     display: flex;
-    border-bottom: 1px solid #fff;
+    cursor: pointer;
+    border-bottom: 1px solid #98c3e8;
 }
 
 .clients__logo {
-    border-right: 1px solid #fff;
+    width: 217px;
     text-align: center;
     position: relative;
     transition: background 0.2s linear;
+    border-right: 1px solid #98c3e8;
 }
 
 .clients__logo:hover {
@@ -295,7 +325,6 @@ h6 {
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1;
     text-align: center;
     opacity: 0;
     transition: opacity 0.2s linear;
@@ -320,39 +349,101 @@ h6 {
 }
 
 
-/* Footer */
+/* Question */
 
 footer {
     background: #316099;
     border-radius: 0px 200px 0px 0px;
 }
 
-.footer__inner {
+.question__inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 70px 0;
 }
 
-.footer__item {
+.question__item {
     width: 50%;
 }
 
-.btn--footer {
-    margin-top: 0;
+.question__item .btn--question {
+    display: flex;
+    margin: 0 auto;
     padding: 15px 60px;
 }
 
-.footer__title {
+.question__title {
     font-size: 36px;
     line-height: 46px;
     letter-spacing: 0.05em;
     color: #ffffff;
+    margin-bottom: 25px;
 }
 
-.footer__text {
+.question__text {
     line-height: 26px;
     letter-spacing: 0.05em;
     color: #ffffff;
     opacity: 0.6;
+}
+
+hr {
+    width: 80%;
+    margin: 0;
+    border: 1px solid #8d8e90;
+}
+
+
+/* Footer */
+
+.footer__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 60px 0 30px;
+}
+
+.footer__item {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+}
+
+.footer__logo {
+    font-size: 28px;
+    line-height: 46px;
+    letter-spacing: 0.02em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer__title {
+    font-size: 20px;
+    line-height: 30px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+.footer__text {
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.footer__text:hover {
+    border-bottom: 1px solid #fff;
+}
+
+.copyright {
+    padding-bottom: 30px;
+}
+
+.copyright span {
+    color: #ffffff;
+    opacity: 0.4;
 }
