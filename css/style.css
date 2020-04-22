@@ -725,6 +725,9 @@ form {
 }
 
 .form__title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     font-size: 20px;
     line-height: 30px;
     letter-spacing: 0.04em;
@@ -911,17 +914,20 @@ textarea::placeholder {
     }
 }
 
+
+/* Modal */
+
 .modal {
     position: fixed;
+    left: auto;
     top: 0;
-    left: 30%;
     z-index: 1;
-    transform: translate(0%, 0%) scale(0);
+    transform: scale(0);
     transition: 0.2s linear;
 }
 
 .modal.active {
-    transform: translate(0%, 0%) scale(1);
+    transform: scale(1);
 }
 
 .modal .form__title {

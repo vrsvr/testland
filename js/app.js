@@ -3,6 +3,21 @@ $(() => {
     const closeModalButtons = document.querySelectorAll('[data-close-button]')
     const overlay = document.getElementById('overlay')
 
+    $("#form").submit(function() {
+        event.preventDefault();
+
+        alert("Форма отправлена успешно!");
+        $.ajax({
+            type: "POST",
+            url: "mail.php",
+            data: $(this).serialize()
+        }).done(function() {
+            $(this).find("input").val("");
+            $("#form").trigger("reset");
+        });
+        return false;
+    });
+
     openModalButtons.forEach(button => {
         button.addEventListener('click', () => {
             const modal = document.querySelector(button.dataset.modalTarget)
@@ -29,5 +44,6 @@ $(() => {
         modal.classList.remove('active')
         overlay.classList.remove('active')
     }
+
 
 });
